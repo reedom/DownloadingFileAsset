@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +20,76 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cji-fd-O4J">
+                                <rect key="frame" x="101" y="329.5" width="238" height="8"/>
+                                <color key="tintColor" red="0.18039215689999999" green="0.67450980390000004" blue="0.42745098040000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="6td-x8-Lgm"/>
+                                </constraints>
+                            </progressView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-5C-v9w">
+                                <rect key="frame" x="101" y="357.5" width="238" height="8"/>
+                                <color key="tintColor" red="0.1181474701" green="0.74737817049999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="Qrk-aU-rqk"/>
+                                </constraints>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Download" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9r-1A-I1G">
+                                <rect key="frame" x="20" y="325.5" width="61" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USG-bo-RA9">
+                                <rect key="frame" x="50" y="353.5" width="31" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxy-UX-ePL">
+                                <rect key="frame" x="122.5" y="385.5" width="130" height="30"/>
+                                <state key="normal" title="Start reading asset"/>
+                                <connections>
+                                    <action selector="didTapStartReading" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RUh-hB-YtR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHz-pg-14h">
+                                <rect key="frame" x="112" y="285" width="151" height="30"/>
+                                <state key="normal" title="Simulate downloading"/>
+                                <connections>
+                                    <action selector="didTapStartDownloading" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LPo-qb-Gxk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="cji-fd-O4J" secondAttribute="trailing" constant="20" id="370-S5-FEe"/>
+                            <constraint firstItem="v9r-1A-I1G" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="5eD-x4-k4r"/>
+                            <constraint firstItem="USG-bo-RA9" firstAttribute="top" secondItem="v9r-1A-I1G" secondAttribute="bottom" constant="12" id="9BP-H7-gRX"/>
+                            <constraint firstItem="rHz-pg-14h" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="Grp-Hv-lPD"/>
+                            <constraint firstItem="oPh-5C-v9w" firstAttribute="centerY" secondItem="USG-bo-RA9" secondAttribute="centerY" id="IIr-Uu-3m2"/>
+                            <constraint firstItem="cji-fd-O4J" firstAttribute="top" secondItem="rHz-pg-14h" secondAttribute="bottom" constant="14.5" id="NLk-7u-8nh"/>
+                            <constraint firstItem="v9r-1A-I1G" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="UBt-Av-zYn"/>
+                            <constraint firstItem="hxy-UX-ePL" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="V2l-SO-4Gb"/>
+                            <constraint firstItem="cji-fd-O4J" firstAttribute="centerY" secondItem="v9r-1A-I1G" secondAttribute="centerY" id="aIf-rt-bPS"/>
+                            <constraint firstItem="cji-fd-O4J" firstAttribute="leading" secondItem="v9r-1A-I1G" secondAttribute="trailing" constant="20" id="bbx-VU-9TW"/>
+                            <constraint firstItem="USG-bo-RA9" firstAttribute="trailing" secondItem="v9r-1A-I1G" secondAttribute="trailing" id="cg6-Hi-kcb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oPh-5C-v9w" secondAttribute="trailing" constant="20" id="e2u-lj-Zwx"/>
+                            <constraint firstItem="hxy-UX-ePL" firstAttribute="top" secondItem="oPh-5C-v9w" secondAttribute="bottom" constant="20" id="ehR-65-G7j"/>
+                            <constraint firstItem="oPh-5C-v9w" firstAttribute="leading" secondItem="USG-bo-RA9" secondAttribute="trailing" constant="20" id="rjK-av-yiP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loadingProgressView" destination="cji-fd-O4J" id="NcZ-8r-b8R"/>
+                        <outlet property="readPositionView" destination="oPh-5C-v9w" id="5jQ-nL-db0"/>
+                        <outlet property="startDownloadingButton" destination="rHz-pg-14h" id="sJm-Bi-51J"/>
+                        <outlet property="startReadingButton" destination="hxy-UX-ePL" id="4gk-Xe-YXg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138" y="133"/>
         </scene>
     </scenes>
 </document>

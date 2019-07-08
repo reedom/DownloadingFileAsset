@@ -1,0 +1,31 @@
+PODS:
+  - DownloadingFileAsset (0.1.0):
+    - DPUTIUtil
+  - DPUTIUtil (1.0)
+  - Nimble (7.3.4)
+  - Quick (1.2.0)
+
+DEPENDENCIES:
+  - DownloadingFileAsset (from `../`)
+  - Nimble (~> 7.0)
+  - Quick (~> 1.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - DPUTIUtil
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  DownloadingFileAsset:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DownloadingFileAsset: deb3a51be1a2b7b0d757a13e6bcc69698268a0f3
+  DPUTIUtil: ec7d6a9521e76ff9e66c8ffc2c524f73466387c9
+  Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
+  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+
+PODFILE CHECKSUM: e0db5246baa9397491d5b183ffd6f8b7f814754a
+
+COCOAPODS: 1.6.1
